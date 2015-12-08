@@ -15,4 +15,7 @@
 [http://nose.readthedocs.org/en/latest/usage.html](http://nose.readthedocs.org/en/latest/usage.html "Заголовок ссылки")  
 #More about Jinja:
 [http://jinja.pocoo.org/docs/dev/](http://jinja.pocoo.org/docs/dev/ "Заголовок ссылки")  
+#To see prints in console use option:
+`--nocapture`
+
 
