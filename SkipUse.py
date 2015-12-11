@@ -9,6 +9,4 @@ featureA = False
 class A(unittest.TestCase):
     @unittest.skipIf(not featureA, "skiped")
     def test(self):
-        print "dfmdokfmvpkms"
-
-    unittest.SkipTest()
+        print("In test")

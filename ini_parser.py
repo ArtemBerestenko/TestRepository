@@ -7,9 +7,9 @@ from configobj import ConfigObj
 config = ConfigObj('file.ini')
 #
 FeatureA = bool(int(config['FeatureA']))
-print FeatureA
+print(FeatureA)
 
-print "with section:"
+print("with section:")
 section1 = config['features']
 FeatureB = section1['FeatureB']
-print bool(int(FeatureB))
+print(bool(int(FeatureB)))

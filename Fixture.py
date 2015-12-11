@@ -7,48 +7,49 @@ __author__ = 'aberes'
 import unittest
 
 def setUpModule():
-    print "In Setup Module"
+    print("In Setup Module")
 
 
 def tearDownModule():
-    print "In tear down Module"
+    print("In tear down Module")
 
 
 # @unittest.skip("weve")
 class TestOfFixture_Unit_Test(unittest.TestCase):
     def setUp(self):
-        print "in Setup test"
+        print("TestOfFixture_Unit_Test.in Setup test")
 
     def tearDown(self):
-        print "In Tear Down"
+        print("TestOfFixture_Unit_Test.In Tear Down")
 
     @classmethod
     def setUpClass(cls):
-        print "in Setup Class"
+        print("TestOfFixture_Unit_Test.in Setup Class")
 
     @classmethod
     def tearDownClass(cls):
-        print "In Tear Down Class"
+        print("TestOfFixture_Unit_Test.In Tear Down Class")
 
     def testmethod(self):
+        print("TestOfFixture_Unit_Test.test")
         self.assertTrue(1 == 1)
 
 
 def setup_func():
-    print "in setup test"
+    print("setup_func.in setup test")
 
 
 def teardown_func():
-    print "in tear down"
+    print("teardown_func.in tear down")
 
 
 class TestOfFixture_Nose():
     @classmethod
     def setUpClass(self):
-        print "in Setup Class"
+        print("TestOfFixture_Nose.in Setup Class")
 
     def setUp(self):
-        print "in Setup test"
+        print("TestOfFixture_Nose.in Setup test")
 
     def test(self):
-        print "some test code"
+        print("TestOfFixture_Nose.some test code")

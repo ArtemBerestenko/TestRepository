@@ -5,11 +5,11 @@ from ForTest import TestedClass
 
 
 def setUpModule():
-    print "Before module"
+    print("Before module")
 
 
 def tearDownModule():
-    print "After module"
+    print("After module")
 
 
 testinst = TestedClass()
@@ -21,30 +21,21 @@ class TestSequenceFunctions(unittest.TestCase):
 
     @classmethod
     def setUpClass(self):
-        print "Initials before test class"
+        print("Initials before test class")
 
     @classmethod
     def tearDownClass(self):
-        print "Conditions after test class"
+        print("Conditions after test class")
 
     def setUp(self):
-        print "before each unit test"
+        print("before each unit test")
         self.seq = range(10)
 
     def tearDown(self):
-        print "after each unit test"
+        print("after each unit test")
 
     def testmytest(self):
         self.assertTrue(2 == 1)
-
-    def test_shuffle(self):
-        # We check that blended sequence is not lost
-        # no element
-        random.shuffle(self.seq)
-        self.seq.sort()
-        self.assertEqual(self.seq, range(10))
-        # throw exceptions for not changable sequenses
-        self.assertRaises(TypeError, random.shuffle, (1, 2, 3))
 
     def test_choice(self):
         element = random.choice(self.seq)

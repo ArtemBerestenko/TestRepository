@@ -15,7 +15,7 @@ def decorator(function_to_decorate):
         try:
             function_to_decorate(self)
         except AssertionError as exc:
-            print "*********In decorator"
+            print("*********In decorator")
             file = open("failure.ini", "w+")
             file.write(function_to_decorate.__name__ + " = " + "Failure" + '\n')
             # file.write("dsgbndgfmjg")
@@ -35,4 +35,4 @@ class A(unittest.TestCase):
 
     @unittest.skipIf(config['testA'] == "Failure", "Must be skiped")
     def testB(self):
-        print "In test B"
+        print("In test B")
